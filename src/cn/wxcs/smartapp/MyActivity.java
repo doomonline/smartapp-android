@@ -1,15 +1,13 @@
 package cn.wxcs.smartapp;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-public class MyActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
+import org.apache.cordova.CordovaActivity;
+public class MyActivity extends CordovaActivity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        super.loadUrl("file:///android_asset/www/index.html");
+        super.appView.getSettings().setUserAgentString("smart@pp");
     }
 }
