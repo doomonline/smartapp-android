@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Cordova Tests</title>
+      
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript">
+    
+    </script
+  </head>
+  <body onload="" id="stage" class="theme">
+    <h1>SmartAPP DEMO 0.1 pre alpha</h1>
+    <h1>Hello world!</h1>
+    <script type="text/javascript">
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+      function onDeviceReady() 
+      {
+        cordova.exec(function(msg){alert(msg);}, function(errmsg){alert(errmsg );}, "Echo", "echo", ["hello world,SmartAPP!"]);
+
+        
+      }  
+    </script>
+  </body>
+</html>
